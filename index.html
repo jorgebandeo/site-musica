@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Você, Meu Amor</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #ffe6e6, #ffffff); /* degrade suave rosa pálido para branco */
+            font-family: 'Georgia', serif;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        h1 {
+            color: #b85c8c;
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            padding: 0 20px;
+        }
+
+        button {
+            background-color: #f8e1e7;
+            border: 2px solid #b85c8c;
+            color: #b85c8c;
+            font-size: 1.2em;
+            padding: 12px 24px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            outline: none;
+        }
+
+        button:hover {
+            background-color: #b85c8c;
+            color: white;
+        }
+
+        /* Animação suave de entrada */
+        .fade-in {
+            animation: fadeIn 2s ease-in;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: scale(0.95); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1 class="fade-in">Uma surpresa para você, meu amor 💖</h1>
+
+    <button class="fade-in" onclick="playMusic()">Clique aqui para começar</button>
+
+    <audio id="myAudio">
+        <source src="sua-musica.mp3" type="audio/mpeg">
+        Seu navegador não suporta áudio.
+    </audio>
+
+    <script>
+        function playMusic() {
+            var audio = document.getElementById("myAudio");
+            audio.volume = 1.0;
+            audio.play();
+        }
+    </script>
+
+</body>
+</html>
